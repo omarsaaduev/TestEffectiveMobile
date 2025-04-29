@@ -1,7 +1,7 @@
-
 # Medods - Сервис аутентификации
 
 ## Описание ТЗ
+
 Реализовать сервис, который будет получать по API ФИО, из открытых API обогащать
 ответ наиболее вероятными возрастом, полом и национальностью и сохранять данные в
 БД. По запросу выдавать инфу о найденных людях.
@@ -14,7 +14,6 @@
 - **Service Layer** - реализует бизнес-логику
 - **Repository Layer** - отвечает за работу с данными
 - **Handler Layers** - обрабатывают HTTP запросы
-
 
 ## Технологии
 
@@ -36,11 +35,16 @@
 ### Через Docker
 
 1. Клонируйте репозиторий
+
+```bash
+git clone https://github.com/omarsaaduev/TestEffectiveMobile.git
+```
+
 2. Создайте `.env` файл на основе `.env.example` (он описан ниже)
 3. Запустите через Docker Compose:
-   ```bash
+```bash
    docker-compose up -d
-
+```
 
 ## Конфигурация ENV
 
@@ -54,15 +58,15 @@ DB_SSLMODE=disable
 SERVER_PORT=8085
 ```
 
-
-
 ## Rest методы
+
 1. GET /persons/
 2. POST /persons/
 3. PUT /persons/{id}/
 4. DELETE /persons/{id}/
 
 ## Swagger
+
 Методы детально описаны в swagger и доступны по маршуту:
 
-	http://localhost:8085/swagger/index.html
+    http://localhost:8085/swagger/index.html
